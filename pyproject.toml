@@ -1,0 +1,41 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["ALL"]
+ignore = [
+    "A003",   # Class attribute is shadowing a Python builtin
+    "ARG",    # flake8-unused-arguments
+    "ANN",    # flake8-annotations
+    "COM",    # flake8-commas
+    "D",      # pydocstyle
+    "EM",     # flake8-errmsg
+    "ISC001", # Implicitly concatenated string should be explicitly concatenated
+    "PLR2004",# Magic value used in comparison, consider replacing with a constant variable
+    "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
+    "S101",   # Use of `assert` detected
+    "TCH001", # Move application import into a type-checking block
+    "TCH002", # Move third-party import into a type-checking block
+    "TCH003", # Move standard library import into a type-checking block
+    "TRY003", # Avoid specifying long messages outside the exception class
+]
+exclude = [
+    ".git",
+    "__pycache__",
+    ".venv*/*",
+]
+
+[tool.ruff.flake8-quotes]
+inline-quotes = "single"
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.isort]
+force-single-line = true
+order-by-type = false
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "auto"
+quote-style = "single"
+skip-magic-trailing-comma = false

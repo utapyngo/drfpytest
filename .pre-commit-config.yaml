@@ -1,0 +1,30 @@
+repos:
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
+  hooks:
+  - id: check-added-large-files
+  - id: check-merge-conflict
+  - id: check-symlinks
+  - id: check-toml
+  - id: check-yaml
+    exclude: ^.helm/.+/templates/
+  - id: destroyed-symlinks
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.1.13
+  hooks:
+  - id: ruff-format
+  - id: ruff
+    args: [--fix, --exit-non-zero-on-fix]
+
+- repo: local
+  hooks:
+  - id: django check
+    name: django check
+    entry: bash -c "./manage.py check --fail-level WARNING"
+    language: system
+    pass_filenames: false
+    types: [python]
