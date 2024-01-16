@@ -1,6 +1,6 @@
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py39"
 select = ["ALL"]
 ignore = [
     "A003",   # Class attribute is shadowing a Python builtin
@@ -17,6 +17,7 @@ ignore = [
     "TCH002", # Move third-party import into a type-checking block
     "TCH003", # Move standard library import into a type-checking block
     "TRY003", # Avoid specifying long messages outside the exception class
+    "UP007",  # Use `X | Y` for type annotations (for compatibility with older Python versions)
 ]
 exclude = [
     ".git",

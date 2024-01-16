@@ -1,12 +1,12 @@
 anys==0.3.0
-django==5.0.1
+django==4.2.9
 django-autocompletefilter==0.0.8
 django-import-export==3.3.6
-django-pydantic-field==0.3.0b2
+django-pydantic-field==0.3.0
 djangorestframework==3.14.0
 drf-orjson-renderer==1.7.2
 drf-spectacular==0.27.0
-ipython==8.20.0
+ipython==8.18.1
 pip-tools==7.3.0
 pre-commit==3.6.0
 pur==7.3.1

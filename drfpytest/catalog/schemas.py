@@ -1,3 +1,7 @@
+from __future__ import annotations
+
+from typing import Optional
+
 from pydantic import BaseModel
 
 
@@ -6,5 +10,5 @@ class ProductBrandData(BaseModel):
 
 
 class ProductData(BaseModel):
-    brand: ProductBrandData | None = None
-    size: str | None = None
+    brand: Optional[ProductBrandData] = None
+    size: Optional[str] = None
