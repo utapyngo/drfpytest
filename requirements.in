@@ -1,5 +1,5 @@
 anys==0.3.0
-django==4.2.9
+django==4.2.10
 django-autocompletefilter==0.0.8
 django-import-export==3.3.6
 django-pydantic-field==0.3.0
