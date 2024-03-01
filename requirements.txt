@@ -40,7 +40,7 @@ diff-match-patch==20230430
     # via django-import-export
 distlib==0.3.8
     # via virtualenv
-django==4.2.9
+django==4.2.10
     # via
     #   -r requirements.in
     #   django-autocompletefilter
